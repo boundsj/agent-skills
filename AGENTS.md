@@ -73,3 +73,6 @@ Skills can include scripts that the agent invokes (e.g., `log-pretty.sh` for log
 - One directory per skill at the repo root
 - Update the table in `README.md` when adding a skill
 - Keep skills agent-agnostic where possible (Claude Code, Codex, Cursor)
+- Published skill internals must be self-contained: do not reference `~/.claude`, `~/.codex`, or private checkout paths from `SKILL.md` files or bundled helper scripts in this repo
+- Keep personal or org-specific values out of public skills unless the skill is explicitly a private wrapper
+- Helper scripts should live inside the owning skill directory unless the shared helper also lives in this repo and is documented here
