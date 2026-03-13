@@ -117,22 +117,24 @@ Fetch the user's review activity for the last 5 days using the GitHub search API
 gh api "search/issues?q=repo:$REPO+type:pr+reviewed-by:$USER+updated:YYYY-MM-DD..YYYY-MM-DD" --jq '.total_count'
 ```
 
-Render a horizontal bar chart using block characters. Each block represents 1 review:
+Render a horizontal bar chart using block characters, scaled to a max width of 10 characters.
+Find the largest count across all 5 days — that day gets 10 blocks, and the others scale proportionally
+(round to nearest, minimum 1 block for non-zero counts):
 
 ```text
 Reviews completed (last 5 days):
 
-Mar 12  ████████████  6
-Mar 11  ██████████    5
-Mar 10  ████          2
-Mar 09                0
-Mar 08  ██████        3
-                      ─────
-                      Total: 16
+Mar 12  ████████████   6
+Mar 11  ███████████    5
+Mar 10  ████           2
+Mar 09                 0
+Mar 08  ██████████     3
+                       ─────
+                       Total: 16
 ```
 
 Use `█` (full block) characters. If a day has 0 reviews, show no blocks and just the `0`.
-Right-align the count numbers. Show the total at the bottom.
+Right-align the count numbers after the bar area. Show the total at the bottom.
 
 If the API call fails or returns errors, skip the chart silently - it's supplementary.
 
