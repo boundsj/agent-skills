@@ -9,7 +9,7 @@ Reusable skills for AI coding agents (Claude Code, Codex, Cursor).
 | **[cmux](cmux/)** | Terminal multiplexer integration -- orchestrate sessions, stream output, report progress, and interact with browser panels inside [cmux](https://cmux.io) |
 | **[review-alerts](review-alerts/)** | Report-only GitHub review queue summary. Shows prioritized pending PR reviews for an explicit `repo` and `user`, plus a lightweight recent-review activity chart. Requires `gh` and `jq`. |
 | **[codex-review](codex-review/)** | Codex code review closeout workflow -- run review on local changes, branches, or PRs, filter findings, and rerun focused tests |
-| **[mac-mini](mac-mini/)** | Mac mini remote host awareness -- connect over the cottage network, account for the live OpenClaw instance, and handle deploys or service work safely |
+| **[mac-mini](mac-mini/)** | Mac mini remote host awareness -- prefer the Clawd Tailscale route, keep the home-LAN Clawd route as backup, account for the live OpenClaw instance, and handle deploys or service work safely |
 
 ## Install
 
