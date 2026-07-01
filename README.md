@@ -29,8 +29,8 @@ For Codex, symlink into `~/.codex/skills/` instead (or in addition).
 ## Usage Notes
 
 - `review-alerts` requires explicit `repo` and `user` inputs; it does not infer them from the current checkout or authenticated GitHub account
-- `autoreview` is vendored from `https://github.com/openclaw/agent-skills/tree/main/skills/autoreview`; this repo's `origin` does not pull updates for that skill. Refresh it by copying OpenClaw's `skills/autoreview/` over this repo's `autoreview/`.
+- `autoreview` is vendored from `https://github.com/openclaw/agent-skills/tree/main/skills/autoreview`; this repo's `origin` does not pull updates for that skill. Refresh it by copying OpenClaw's `skills/autoreview/` over this repo's `autoreview/`. It retains OpenClaw's own MIT copyright -- see [`autoreview/LICENSE`](autoreview/LICENSE).
 
 ## License
 
-MIT
+MIT, copyright Jesse Bounds, for everything in this repo except `autoreview/`, which is vendored from OpenClaw under its own MIT license ([`autoreview/LICENSE`](autoreview/LICENSE)).
